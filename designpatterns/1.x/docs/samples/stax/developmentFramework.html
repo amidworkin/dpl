@@ -1,41 +1,44 @@
 <!doctype html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
 
-        <title>Samples - EAGB</title>
+<head>
+    <meta charset="utf-8">
 
-        <meta name="description" content="">
-        <meta name="keywords" contnet="">
+    <title>Samples - Dev Framework</title>
 
-        <meta name="viewport" content="width=device-width">
-        <meta name="theme-color" content="#004c97">
+    <meta name="description" content="">
+    <meta name="keywords" contnet="">
 
-        <meta property="og:title" content="Colors">
-        <meta property="og:description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#004c97">
 
-        <link rel="shortcut icon" href="/designpatterns/1.x/generated/favicon.ico">
+    <meta property="og:title" content="Colors">
+    <meta property="og:description" content="">
 
-        <!--[if lt IE 9]>
+    <link rel="shortcut icon" href="/designpatterns/1.x/generated/favicon.ico">
+
+    <!--[if lt IE 9]>
             <script src="/designpatterns/1.x/generated/vendor/html5shiv/html5shiv.min.js"></script>
         <![endif]-->
 
-        <link href="/designpatterns/1.x/generated/styles/vendor.css" rel="stylesheet"/>
-        <link href="/designpatterns/1.x/generated/styles/main.css" rel="stylesheet"/>        
+    <link href="/designpatterns/1.x/generated/styles/vendor.css" rel="stylesheet" />
+    <link href="/designpatterns/1.x/generated/styles/main.css" rel="stylesheet" />
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		
-		  ga('create', 'UA-105659331-2', 'auto');
-		  ga('send', 'pageview');
-		
-		</script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    </head>
-    <body>
+        ga('create', 'UA-105659331-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -43,31 +46,31 @@
     <header class="pl-header navbar navbar-fixed-top navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="/designpatterns/index.html" class="navbar-brand"><strong>EAGB</strong> <span class="light">Samples</span></a>
+                <a href="/designpatterns/index.html" class="navbar-brand"><strong>EAGB</strong> <span class="light">DevFrame</span></a>
                 <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-inverse icon-bars"></i></button>
                 <button data-toggle="collapse" data-target="#pl-navbar-collapse" type="button" class="btn navbar-toggle collapsed"><i class="icon icon-inverse icon-angle-down"></i></button>
             </div>
             <div class="navbar-collapse collapse" id="pl-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li  >
-                        <a href="/designpatterns/index.html">About</a>
+                    <li>
+                        <a href="/index2.html">About</a>
                     </li>
-                    <li  >
+                    <li>
                         <a href="/designpatterns/1.x/docs/index.html">Library</a>
                     </li>
-                    <li  >
+                    <li>
                         <a href="/designpatterns/1.x/docs/resources.html">Resources</a>
                     </li>
-                    <li  >
+                    <li>
                         <a href="/designpatterns/1.x/docs/guides/">Guides</a>
                     </li>
-                    <li  >
+                    <li>
                         <a href="/designpatterns/1.x/docs/changelog.html">Changelog</a>
-                    </li>                    
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="https://github.com/uspto/designpatterns" title="View on Github" ><i class="icon icon-inverse icon-github"></i> &nbsp; View on Github</a>
+                        <a href="https://github.com/uspto/designpatterns" title="View on Github"><i class="icon icon-inverse icon-github"></i> &nbsp; View on Github</a>
                     </li>
                 </ul>
             </div>
@@ -76,105 +79,235 @@
     <div class="pl-container">
         <nav class="pl-sidebar">
             <ul class="nav nav-stacked">
-                <li class="category">Development Framework</li>
-                    <li  class="active"  >
-                        <a  href=""> Development Framework </a>
-                    </li>
-                    <li  >
-                        <a  href="#spring-boot"> Boot </a>
-                    </li>
-                
-                    <li  >
-                        <a  href="#spring-security"> Security </a>
-                    </li>
+                <li class="category">Dev Framework</li>
+                <li class="active">
+                        <a href="#spring-overview"> Overview </a>
+                </li>
+                <li>
+                    <a href="#spring-core"> Core </a>
+                </li>
+                <li>
+                    <a href="#spring-boot"> Boot </a>
+                </li>
 
-                    <li  >
-                        <a  href="#spring-integration"> Integration </a>
-                    </li>
-                
-                    <li  >
-                       <a  href="#spring-data"> Data </a>
-                    </li>
-                
-                    <li  >
-                        <a  href="#spring-batch"> Batch </a>
-                    </li>
-                
-                    <li  >
-                        <a  href="#spring-restdocs"> Rest Docs - <em>Under Review</em></a>
-                    </li>
+                <li>
+                    <a href="#spring-security"> Security </a>
+                </li>
+
+                <li>
+                    <a href="#spring-integration"> Integration </a>
+                </li>
+
+                <li>
+                    <a href="#spring-data"> Data </a>
+                </li>
+
+                <li>
+                    <a href="#spring-batch"> Batch </a>
+                </li>
+
+                <li>
+                    <a href="#spring-restdocs"> Rest Docs - <em>Under Review</em></a>
+                </li>
 
                 <li class="category">products</li>
-                    <li  class="active"  >
-                        <a  href="/designpatterns/1.x/docs/samples/products/springCore.html"> Spring</a>
-                    </li>
-                    <li  >
-                        <a  href="/designpatterns/1.x/docs/samples/products/springBoot.html"> Boot </a>
-                    </li>
-                
-                    <li  >
-                        <a  href="/designpatterns/1.x/docs/samples/products/springSecurity.html"> Security </a>
-                    </li>
+                <li class="active">
+                    <a href="/designpatterns/1.x/docs/samples/products/springCore.html"> Spring</a>
+                </li>
+                <li>
+                    <a href="/designpatterns/1.x/docs/samples/products/springBoot.html"> Boot </a>
+                </li>
 
-                    <li  >
-                        <a  href="/designpatterns/1.x/docs/samples/products/springIntegration.html"> Integration </a>
-                    </li>
-                
-                    <li  >
-                        <a  href="/designpatterns/1.x/docs/samples/products/springData.html"> Data </a>
-                    </li>
-                
-                    <li  >
-                        <a  href="/designpatterns/1.x/docs/samples/products/springBatch.html"> Batch </a>
-                    </li>
-                
-                    <li  >
-                        <a  href="/designpatterns/1.x/docs/samples/products/springRestDocs.html"> Rest Docs - <em>Under Review</em></a>
-                    </li>
+                <li>
+                    <a href="/designpatterns/1.x/docs/samples/products/springSecurity.html"> Security </a>
+                </li>
+
+                <li>
+                    <a href="/designpatterns/1.x/docs/samples/products/springIntegration.html"> Integration </a>
+                </li>
+
+                <li>
+                    <a href="/designpatterns/1.x/docs/samples/products/springData.html"> Data </a>
+                </li>
+
+                <li>
+                    <a href="/designpatterns/1.x/docs/samples/products/springBatch.html"> Batch </a>
+                </li>
+
+                <li>
+                    <a href="/designpatterns/1.x/docs/samples/products/springRestDocs.html"> Rest Docs - <em>Under Review</em></a>
+                </li>
 
             </ul>
         </nav>
-        <section class="pl-content">
-            <div class="pl-pattern">
+
+        <!-- OVERVIEW -->
+        <section id="spring-overview" class="pl-content" style="padding: 0;">
+            <div class="pl-pattern" >
+                <h3>TECH STACK: Development Framework</h3>
+                <h4>Overview</h4>
+                <p>Development frameworks began as a single category in the various portfolio tech stacks.  As they grow in scope and under EAD governance, the stack has expanced to incorporate multiple sub-categories.  Rather than tracking categories against specific product offerings (Spring or Angular), EAD maps development framework abstractions against against product implementations.  This enables <em>hot-swapping</em> entire frameworks as ecosystem requirements evolve.</p>
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Descirption</th>
+                                <th>Current State</th>
+                                <th>Future State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#spring-core">Development Framework - Core<a></td>
+                                <td>Framework implementations and plumbing - <em>required</em></td>
+                                <td>Spring Framework 4.3.10</td>
+                                <td>Spring Framework 5.x.x - <em>Emerging</em></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#spring-boot">Development Framework - Boot<a></td>
+                                <td>Project setup, component inclusion, and scaffolding - <em>optional</em></td>
+                                <td>Spring Boot 4.3.10</td>
+                                <td>Spring Boot 5.x.x - <em>Emerging</em></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#spring-security">Development Framework - Security</a></td>
+                                <td>Internal security implementations and controls - <em>optional</em></td>
+                                <td>Spring Security 4.2.3</td>
+                                <td>Spring Security 5.x.x - <em>Emerging</em></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#spring-integration">Development Framework - Integration</a></td>
+                                <td>Framework enterprise integration patterns  - <em>optional</em></td>
+                                <td>Spring Integration 4.3.10</td>
+                                <td>Spring Integration 5.x.x - <em>Emerging</em></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#spring-data">Development Framework - Data</a></td>
+                                <td>Data abstraction layer - <em>optional</em></td>
+                                <td>Spring Data Ingalls-SR7</td>
+                                <td>Spring Data Kay - <em>Emerging</em></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#spring-batch">Development Framework - Batch</a></td>
+                                <td>Batch processing/unattended jobs - <em>optional</em></td>
+                                <td>Spring Batch 3.0.8</td>
+                                <td>Spring Batch 4.x.x- <em>Emerging</em></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#spring-restdocs">Development Framework - REST Docs</a></td>
+                                <td>Swagger integrated REST API documentation - <em>under review</em></td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <!-- ID -->
+            </div>
+        </section>
+    
+        <!-- CORE -->
+        <section id="spring-core" class="pl-content" style="padding: 0;">
+            <div class="pl-pattern" >
                 <h3>Core</h3>
                 <!-- ID -->
                 <h4 id="core-id">Stack Id</h4>
-                <p>
-                    [<em>P | T | FM | PB]</em><strong> CORE-0200</strong>
-                </p>
-                <p>
+                [<em>P | T | FM | PB]</em><strong> CORE-0200</strong>
+                
                 <!-- CATEGORY -->
                 <h4 id="core-category">Category</h4>
-                <p>
-                    Development Framework - Core
-                </p>
+                Development Framework - Core
+
                 <!-- DESCRIPTION -->
                 <h4 id="core-description">Description</h4>
-                <p>A software abstraction providing generic functionality selectively changed by additional user-written code, thus providing application-specific software. A software framework is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions. Software frameworks may include support programs, compilers, code libraries, tool sets, and application programming interfaces (APIs) that bring together all the different components to enable development of a project or solution.</p>
-                <p>Features:</p>
-                <ul style="list-style-position: inside;padding-left:0;">
-                    <li>Inversion of control</li>
-                    <li>Default behavior<br/></li>
-                    <li>Extensibility</li>
-                    <li>Non-modifiable framework code</li>
-                </ul>
-                <p style="color: red;"><strong>Developer&#39;s Note:</strong>&#160;&#160;Not all components in Spring are approved for use (e.g. embedded tomcat), and some, like hateoas, require specific use approval</p>
+                <div class="pl-preview">
+                    <div style="padding: 20px; background: #fff;">
+                        <p>A software abstraction providing generic functionality selectively changed by additional user-written
+                            code, thus providing application-specific software. A software framework is a universal,
+                            reusable software environment that provides particular functionality as part of a larger
+                            software platform to facilitate development of software applications, products and solutions.
+                            Software frameworks may include support programs, compilers, code libraries, tool sets, and
+                            application programming interfaces (APIs) that bring together all the different components
+                            to enable development of a project or solution.</p>
+                        <p>Features:</p>
+                        <ul style="list-style-position: inside;padding-left:0;">
+                            <li>Inversion of control</li>
+                            <li>Default behavior<br/></li>
+                            <li>Extensibility</li>
+                            <li>Non-modifiable framework code</li>
+                        </ul>
+                        <p style="color: red;"><strong>Developer&#39;s Note:</strong>&#160;&#160;Not all components in Spring are approved for
+                            use (e.g. embedded tomcat), and some, like hateoas, require specific use approval</p>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+                            <span class="nt">&lt;p&gt;</span>
+                                A software abstraction providing generic functionality selectively changed by additional user-written code, thus providing
+                                application-specific software. A software framework is a universal, reusable software environment that provides particular 
+                                functionality as part of a larger software platform to facilitate development of software applications, products and solutions. 
+                                Software frameworks may include support programs, compilers, code libraries, tool sets, and application programming interfaces 
+                                (APIs) that bring together all the different components to enable development of a project or solution.
+                            <span class="nt">&lt;/p&gt;</span>
+                            <span class="nt">&lt;p&gt;</span>
+                                Features:
+                            <span class="nt">&lt;/p&gt;</span>
+                            <span class="nt">&lt;ul</span> <span class="na">style=</span><span class="s">"list-style-position: inside;padding-left:0;"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Inversion of control<span class="nt">&lt;/li&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Default behavior<span class="nt">&lt;/li&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Extensibility<span class="nt">&lt;/li&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Non-modifiable framework code<span class="nt">&lt;/li&gt;</span>
+                            <span class="nt">&lt;/ul&gt;</span>
+                        </code>
+                    </pre>
+                </figure>
+
                 <!-- USAGE -->
                 <h4 id="core-usage">Usage</h4>
-                <p>The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.</p>
-                <p>Features:</p>
-                <ul style="list-style-position: inside;padding-left:0;">
-                    <li>Dependency Injection</li>
-                    <li>Aspect-Oriented Programming including Spring's declarative transaction management</li>
-                    <li>Spring MVC web application and RESTful web service framework</li>
-                    <li>Foundational support for JDBC, JPA, JMS</li>
-                </ul>
+                <div class="pl-preview">
+                    <div style="padding: 20px; background: #fff;">
+                        <p>The Spring Framework provides a comprehensive programming and configuration model for modern
+                            Java-based enterprise applications - on any kind of deployment platform. A key element of
+                            Spring is infrastructural support at the application level: Spring focuses on the "plumbing"
+                            of enterprise applications so that teams can focus on application-level business logic, without
+                            unnecessary ties to specific deployment environments.</p>
+                        <p>Features:</p>
+                        <ul style="list-style-position: inside;padding-left:0;">
+                            <li>Dependency Injection</li>
+                            <li>Aspect-Oriented Programming including Spring's declarative transaction management</li>
+                            <li>Spring MVC web application and RESTful web service framework</li>
+                            <li>Foundational support for JDBC, JPA, JMS</li>
+                        </ul>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+                            <span class="nt">&lt;p&gt;</span>
+                            The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications
+                            - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses
+                            on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties
+                            to specific deployment environments.
+                            <span class="nt">&lt;/p&gt;</span>
+                            <span class="nt">&lt;p&gt;</span>
+                                Features:
+                            <span class="nt">&lt;/p&gt;</span>
+                            <span class="nt">&lt;ul</span> <span class="na">style=</span><span class="s">"list-style-position: inside;padding-left:0;"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Dependency Injection<span class="nt">&lt;/li&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Aspect-Oriented Programming including Spring's declarative transaction management<span class="nt">&lt;/li&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Spring MVC web application and RESTful web service framework<span class="nt">&lt;/li&gt;</span>
+                                <span class="nt">&lt;li&gt;&lt;</span>Foundational support for JDBC, JPA, JMS<span class="nt">&lt;/li&gt;</span>
+                            <span class="nt">&lt;/ul&gt;</span>
+                        </code>
+                    </pre>
+                </figure>
+
                 <!-- PRODUCT INFO -->
                 <h4 id="core-product">Product Info</h4>
-                    <p><em style="color:gray">All product specific information goes here (excepting Usage blurb)</em></p>
-                
-                  <div class="pl-preview">
-                    <div style="padding: 40px; background: #fff;">
+                <em style="color:gray">All product specific information goes here (excepting Usage blurb)</em>
+
+                <div class="pl-preview">
+                    <div style="padding: 20px; background: #fff;">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -186,19 +319,15 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                            Spring Framework 4.3.10
+                                        Spring Framework 4.3.10
                                     </td>
                                     <td>
-                                            Spring Framework 5.x.x
-                                    </td>                                
+                                        Spring Framework 5.x.x
+                                    </td>
                                     <td>
-                                            Spring Boot<br />
-                                            Spring Security<br />
-                                            Spring Integration<br />
-                                            Spring Data<br />
-                                            Spring Batch<br />
-                                            Spring Rest Docs - <em>Under Review</em><br />
-                                        </td>                                
+                                        Spring Boot<br /> Spring Security<br /> Spring Integration<br /> Spring Data<br
+                                        /> Spring Batch<br /> Spring Rest Docs - <em>Under Review</em><br />
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -221,10 +350,9 @@
                 </figure>
             </div>
         </section>
-        <section id="spring-boot" class="pl-content">
-            
 
-
+        <!-- BOOT -->
+        <section id="spring-boot" class="pl-content" style="padding: 0;">
             <div class="pl-pattern">
                 <h3>Boot</h3>
                 <!-- ID -->
@@ -233,40 +361,129 @@
                     [<em>P | T | FM | PB]</em><strong> CORE-0210</strong>
                 </p>
                 <p>
+                    <!-- CATEGORY -->
+                    <h4 id="boot-category">Category</h4>
+                    <p>
+                        Development Framework - Setup
+                    </p>
+                    <!-- DESCRIPTION -->
+                    <h4 id="boot-description">Description</h4>
+                    <p>Automated setup and scaffolding are techniques supported by some frameworks, in which developers can
+                        specify an applications usage and capabilities without directly interacting with the framework's
+                        configuration internals. Specificationis performed through a UI or by customizing standard configuration
+                        files (e.g. POM.XML) The compiler or framework uses this specification, together with pre-defined
+                        code templates, to generate a startup applicaton. Templated systems effectively treats the templates
+                        as a "scaffold" on which to build an integrated application with pre-defined dependencies. The outcome
+                        is a simplified setup process.</p>
+                    <u><strong>Typical features</strong></u>
+                    <ul style="margin-top: 0;list-style-position: inside;padding-left:0;">
+                        <li>Generation of standard folder layouts</li>
+                        <li>Creating inclusion and dependency management files: POM, package.json, gulpfile.js, etc.</li>
+                        <li>Definition of end to end connector suites</li>
+                    </ul>
+                    <p>Scaffolding is an evolution of code generators from earlier development environments, such as Oracle's
+                        CASE Generator, and many other 4GL client-server software development products.</p>
+
+                    <!-- USAGE -->
+                    <h4 id="boot-usage">Usage</h4>
+                    <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that "just
+                        run". Spring Boot takes an opinionated view of the Spring platform and third-party libraries so developers
+                        can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.</p>
+                    <p>Features:</p>
+                    <ul style="list-style-position: inside;padding-left:0;">
+                        <li>Create stand-alone Spring applications</li>
+                        <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)</li>
+                        <li>Provide opinionated 'starter' POMs to simplify your Maven configuration</li>
+                        <li>Automatically configure Spring whenever possible</li>
+                        <li>Provide production-ready features such as metrics, health checks and externalized
+                        configuration</li>
+                        <li>Absolutely no code generation and no requirement for XML configuration</li>
+                    </ul>
+
+                    <!-- PRODUCT INFO -->
+                    <h4 id="boot-product">Product Info</h4>
+                    <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+
+                    <div class="pl-preview">
+                        <div style="padding: 40px; background: #fff;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Current State</th>
+                                        <th>Future State</th>
+                                        <th>See Also</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Spring Boot 4.3.10
+                                        </td>
+                                        <td>
+                                            Spring Boot 5.x.x
+                                        </td>
+                                        <td>
+                                            Spring Framework<br /> Spring Security<br /> Spring Integration<br /> Spring
+                                            Data
+                                            <br /> Spring Batch<br /> Spring Rest Docs - <em>Under Review</em><br />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <figure class="highlight">
+                        <pre>
+                            <code class="language-html" data-lang="html">
+                                <span>Spring Boot 4.3.10</span>
+                                <span>Spring Boot 5.x.x</span>
+                                <br />
+                                <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Security</span>span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Rest Docs - <em>Under Review</em></span>
+                            </code>
+                        </pre>
+                    </figure>
+            </div>
+        </section>
+
+        <!-- SECURITY -->
+        <section id="spring-security" class="pl-content" style="padding: 0;">
+            <div class="pl-pattern">
+                <h3>Security</h3>
+
+                <!-- ID -->
+                <h4 id="security-id">Stack Id</h4>
+                [<em>P | T | FM | PB]</em><strong> CORE-0220</strong>
+
                 <!-- CATEGORY -->
-                <h4 id="boot-category">Category</h4>
-                <p>
-                    Development Framework - Setup
-                </p>
+                <h4 id="security-category">Category</h4>
+                Development Framework - Security
+
                 <!-- DESCRIPTION -->
-                <h4 id="boot-description">Description</h4>
-                <p>Automated setup and scaffolding are techniques supported by some frameworks, in which developers can specify an applications usage and capabilities without directly interacting with the framework's configuration internals. Specificationis performed through a UI or by customizing standard configuration files (e.g. POM.XML)  The compiler or framework uses this specification, together with pre-defined code templates, to generate a startup applicaton.  Templated systems effectively treats the templates as a "scaffold" on which to build an integrated application with pre-defined dependencies.  The outcome is a simplified setup process.</p>
-                <u><strong>Typical features</strong></u>
-                <ul style="margin-top: 0;list-style-position: inside;padding-left:0;">
-                    <li>Generation of standard folder layouts</li>
-                    <li>Creating inclusion and dependency management files: POM, package.json, gulpfile.js, etc.</li>
-                    <li>Definition of end to end connector suites</li>
-                </ul>
-                <p>Scaffolding is an evolution of code generators from earlier development environments, such as Oracle's CASE Generator, and many other 4GL client-server software development products.</p>
-                
+                <h4 id="security-description">Description</h4>
+                <p>A standard abstraction layer for converting authentication and access controls provided by <strong>RBAC/MyUSPTO</strong> into development level controls. Items like session timeout, clickjacking, translation of RBAC JWTs to access control implementation are managed via the security abstraction. Abstraction allows the evolution and/or replacement of RBAC/MyUSPTO without changing underlying auth/access code mechanics</p>
+                <p style="color:red;"><strong>Developer's Note:</strong> Security layer code is specifically forbidden from implementing authentication and access controls (coarse or fine-grained) that co-opt, subvert, or extend RBAC/MyUSPTO beyond USPTO security controls.  Framework security layers <em>implement</em> RBAC controls in the AIS.</p>
+
                 <!-- USAGE -->
-                <h4 id="boot-usage">Usage</h4>
-                <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that "just run". Spring Boot takes an opinionated view of the Spring platform and third-party libraries so developers can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.</p>
+                <h4 id="security-usage">Usage</h4>
+                <p>Spring Security is a framework that focuses on providing both authentication and authorization to Java applications. Like all Spring projects, the real power of Spring Security is found in how easily it can be extended to meet custom requirements</p>
                 <p>Features:</p>
-                <ul style="list-style-position: inside;padding-left:0;">
-                    <li>Create stand-alone Spring applications/li>
-                    <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)/li>
-                    <li>Provide opinionated 'starter' POMs to simplify your Maven configuration/li>
-                    <li>Automatically configure Spring whenever possible/li>
-                    <li>Provide production-ready features such as metrics, health checks and externalized configuration/li>
-                    <li>Absolutely no code generation and no requirement for XML configuration</li>
+                <ul style="margin-top: 0;list-style-position: inside;padding-left:0;">
+                    <li>Comprehensive and extensible support for both Authentication and Authorization integration with Spring</li>
+                    <li>Protection against attacks like session fixation, clickjacking, cross site request forgery, etc</li>
+                    <li>Servlet API integration</li>
+                    <li>Optional integration with Spring Web MVC</li>
                 </ul>
 
                 <!-- PRODUCT INFO -->
-                <h4 id="boot-product">Product Info</h4>
-                    <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
-                    
-                    <div class="pl-preview">
+                <h4 id="security-product">Product Info</h4>
+                <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+
+                <div class="pl-preview">
                     <div style="padding: 40px; background: #fff;">
                         <table class="table">
                             <thead>
@@ -279,137 +496,406 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                            Spring Boot 4.3.10
+                                        Spring Security 4.2.3
                                     </td>
                                     <td>
-                                            Spring Boot 5.x.x
-                                    </td>                                
+                                        Spring Security 5.x.x
+                                    </td>
                                     <td>
-                                            Spring Framework<br />
-                                            Spring Security<br />
-                                            Spring Integration<br />
-                                            Spring Data<br />
-                                            Spring Batch<br />
-                                            Spring Rest Docs - <em>Under Review</em><br />
-                                        </td>                                
+                                        Spring Framework<br /> Spring Security<br /> Spring Integration<br /> Spring Data<br /> Spring Batch<br /> Spring Rest Docs - <em>Under Review</em><br />
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+                            <span>Spring Security 4.3.10</span>
+                            <span>Spring Security 5.x.x</span>
+                            <br />
+                            <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Boot</span>span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Rest Docs - <em>Under Review</em></span>
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </section>
+
+        <!-- INTEGRATION -->
+        <section id="spring-integration" class="pl-content" style="padding: 0;">
+            <div class="pl-pattern">
+                <h3>Integration</h3>
+
+                <!-- ID -->
+                <h4 id="integration-id">Stack Id</h4>
+                [<em>P | T | FM | PB]</em><strong> CORE-0230</strong>
+
+                <!-- CATEGORY -->
+                <h4 id="integration-category">Category</h4>
+                Development Framework - Integration
+
+                <!-- DESCRIPTION -->
+                <h4 id="integration-description">Description</h4>
+                <p>Today's applications rarely live in isolation. Users expect instant access to all functions, which may be provided by disparate applications and services, inside or outside the enterprise. Integrating applications and services remains more difficult than it should be, though: developers have to deal with asynchrony, partial failures, and incompatible data models.  Integration abstractions establish a technology-independent vocabulary, notation, contracts and instantiated code to perform integration solutions, ranging from connecting applications to a messaging system, routing messages to the proper destination, and monitoring the health of a messaging system.  Each component of an integration framework should provide a proven solution to a recurring problem, but also documents common "gotchas" and design considerations.</p>
+
+                <!-- USAGE -->
+                <h4 id="integration-usage">Usage</h4>
+                <p>Spring Framework encourages developers to code using interfaces and use dependency injection (DI) to provide a Plain Old Java Object (POJO) with the dependencies it needs to perform its tasks. Spring Integration takes this concept one step further, where POJOs are wired together using a messaging paradigm and individual components may not be aware of other components in the application. Such an application is built by assembling fine-grained reusable components to form a higher level of functionality. WIth careful design, these flows can be modularized and also reused at an even higher level.</p>
+                <p>In addition to wiring together fine-grained components, Spring Integration provides a wide selection of channel adapters and gateways to communicate with external systems. Channel Adapters are used for one-way integration (send or receive); gateways are used for request/reply scenarios (inbound or outbound). For a full list of adapters and gateways, refer to the reference documentation.</p>
+                <p>Features:</p>
+                <table class="table">
+                    <tr>
+                        <td>Enterprise Integration Patterns</td>
+                        <td>Endpoint</td>
+                        <td>Channel (Point-to-point and Publish/Subscribe)</td>
+                    </tr>
+                    <tr>
+                        <td>Aggregator</td>
+                        <td>Filter</td>
+                        <td>Transformer</td>
+                    </tr>
+                    <tr>
+                        <td>Control Bus</td>
+                        <td>Integration with External Systems</td>
+                        <td>ReST/HTTP</td>
+                    </tr>
+                    <tr>
+                        <td>FTP/SFTP</td>
+                        <td>Twitter</td>
+                        <td>WebServices (SOAP and ReST)</td>
+                    </tr>
+                    <tr>
+                        <td>TCP/UDP</td>
+                        <td>JMS</td>
+                        <td>RabbitMQ</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>The framework has extensive JMX support</td>
+                        <td>Adapters to obtain, invoke ops, notify MBeans</td>
+                    </tr>
+                    <tr>
+                        <td>Exposing framework components as MBeans</td>
+                    </tr>
+                </table>
+
+                <!-- PRODUCT INFO -->
+                <h4 id="integration-product">Product Info</h4>
+                <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+
+                <div class="pl-preview">
+                    <div style="padding: 40px; background: #fff;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Current State</th>
+                                    <th>Future State</th>
+                                    <th>See Also</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Spring Integration 4.3.10
+                                    </td>
+                                    <td>
+                                        Spring Integratoni 5.x.x
+                                    </td>
+                                    <td>
+                                        Spring Framework<br />
+                                        Spring Boot<br />
+                                        Spring Security<br />
+                                        Spring Data<br />
+                                        Spring Batch<br />
+                                        Spring Rest Docs - <em>Under Review</em><br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+                            <span>Spring Integration 4.3.10</span>
+                            <span>Spring Integration 5.x.x</span>
+                            <br />
+                            <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Boot</span>span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Security</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Rest Docs - <em>Under Review</em></span>
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </section>
+
+        <!-- DATA -->
+        <section id="spring-data" class="pl-content" style="padding: 0;">
+            <div class="pl-pattern">
+                <h3>Data</h3>
+
+                <!-- ID -->
+                <h4 id="data-id">Stack Id</h4>
+                [<em>P | T | FM | PB]</em><strong> CORE-0240</strong>
+
+                <!-- CATEGORY -->
+                <h4 id="data-category">Category</h4>
+                Development Framework - Data
+
+                <!-- DESCRIPTION -->
+                <h4 id="data-description">Description</h4>
+                <p>Data abstraction frameworks reduce data access code to a simplified representation of the whole.  Abstraction, in general, is the process of taking away or removing characteristics from something in order to reduce it to a set of essential characteristics.  A database abstraction layer reduces the complexity of multiple database endpoints, varying data formats, and multiple access mechanisms to rationalized essential elements.</p>
+
+                <!-- USAGE -->
+                <h4 id="data-usage">Usage</h4>
+                <p>Spring Data’s mission is to provide a familiar and consistent, Spring-based programming model for data access while still retaining the special traits of the underlying data store.</p> 
+                <p>It makes it easy to use data access technologies, relational and non-relational databases, map-reduce frameworks, and cloud-based data services. This is an umbrella project which contains many subprojects that are specific to a given database. The projects are developed by working together with many of the companies and developers that are behind these exciting technologies.</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Main Modules</th>
+                            <th>Related Modules</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Repository &amp; custom object-mapping abstractions</td>
+                        <td>Spring Data Commons - Core Spring concepts</td>
+                        <td>Spring Data JDBC Extensions</td>
+                    </tr>
+                    <tr>
+                        <td>Dynamic query derivation from repository method names</td>
+                        <td>Spring Data JPA - Makes it easy to implement JPA-based repositories.</td>
+                        <td>Spring for Apache Hadoop</td>
+                    </tr>
+                    <tr>
+                        <td>Implementation domain base classes providing basic properties</td>
+                        <td>Spring Data KeyValue</td>
+                        <td>Spring Content - Associate content with Data Entities, store in different stores</td>
+                    </tr>
+                    <tr>
+                        <td>Support for transparent auditing (created, last changed)</td>
+                        <td>Spring Data LDAP</td>
+                    </tr>
+                    <tr>
+                        <td>Possibility to integrate custom repository code</td>
+                        <td>Spring Data REST</td>
+                    </tr>
+                    <tr>
+                        <td>Easy Spring integration via JavaConfig and custom XML namespaces</td>
+                        <td>Spring Data for Apache Cassandra</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced integration with Spring MVC controllers</td>
+                        <td>Spring Data for Apache Solr</td>
+                    </tr>
+                </table>
+
+                <!-- PRODUCT INFO -->
+                <h4 id="data-product">Product Info</h4>
+                <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+
+                <div class="pl-preview">
+                    <div style="padding: 10px; background: #fff;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Current State</th>
+                                    <th>Future State</th>
+                                    <th>See Also</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Spring Data Ingalls-SR7
+                                    </td>
+                                    <td>
+                                        Spring Data Kay
+                                    </td>
+                                    <td>
+                                        Spring Framework<br /> Spring Security<br /> Spring data<br /> Spring Data<br /> Spring Batch<br /> Spring Rest Docs - <em>Under Review</em><br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+                            <span>Spring Data Ingalls-SR7</span>
+                            <span>Spring Data Kay</span>
+                            <br />
+                            <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Boot</span>span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Security</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Rest Docs - <em>Under Review</em></span>
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </section>
+
+        <!-- BATCH -->
+        <section id="spring-batch" class="pl-content" style="padding: 0;">
+            <div class="pl-pattern">
+                <h3>Batch</h3>
+
+                <!-- ID -->
+                <h4 id="data-id">Stack Id</h4>
+                [<em>P | T | FM | PB]</em><strong> CORE-0250</strong>
+
+                <!-- CATEGORY -->
+                <h4 id="data-category">Category</h4>
+                Development Framework - Batch
+
+                <!-- DESCRIPTION -->
+                <h4 id="data-description">Description</h4>
+                <p>Batch processing is the execution of a series of programs on a computer without manual intervention (non-interactive). Strictly speaking, it is a processing mode: the execution of a series of programs each on a set or "batch" of inputs, rather than a single input (which would instead be a custom job).</p>
+
+                <!-- USAGE -->
+                <h4 id="data-usage">Usage</h4>
+                <p>A lightweight, comprehensive batch framework designed to enable the development of robust batch applications vital for the daily operations of enterprise systems.</p> 
+                <p>Spring Batch provides reusable functions that are essential in processing large volumes of records, including logging/tracing, transaction management, job processing statistics, job restart, skip, and resource management. It also provides more advanced technical services and features that will enable extremely high-volume and high performance batch jobs through optimization and partitioning techniques. Simple as well as complex, high-volume batch jobs can leverage the framework in a highly scalable manner to process significant volumes of information.</p>
+                <p>Features:</p>
+                <ul style="list-style-position: inside;padding-left:0;">
+                    <li>Transaction management</li>
+                    <li>Chunk based processing</li>
+                    <li>Declarative I/O</li>
+                    <li>Start/Stop/Restart</li>
+                    <li>Retry/Skip</li>
+                    <li>Web based administration interface (Spring Batch Admin)</li>
+                </ul>
+
+                <!-- PRODUCT INFO -->
+                <h4 id="data-product">Product Info</h4>
+                <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+
+                <div class="pl-preview">
+                    <div style="padding: 10px; background: #fff;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Current State</th>
+                                    <th>Future State</th>
+                                    <th>See Also</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Spring Batch 3.0.8
+                                    </td>
+                                    <td>
+                                        Spring Batch 4.x.x
+                                    </td>
+                                    <td>
+                                        Spring Framework<br /> Spring Security<br /> Spring Integration<br /> Spring Data<br /> Spring Batch<br /> Spring Rest Docs - <em>Under Review</em><br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+                            <span>Spring Batch 3.0.8</span>
+                            <span>Spring Batch 4.x.x</span>
+                            <br />
+                            <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Boot</span>span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Security</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Rest Docs - <em>Under Review</em></span>
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </section>    
+
+        <!-- BATCH -->
+        <section id="spring-restdocs" class="pl-content" style="padding: 0;">
+                <div class="pl-pattern">
+                    <h3>REST Docs</h3>
+    
+                    <!-- ID -->
+                    <h4 id="data-id">Stack Id</h4>
+                    [<em>P | T | FM | PB]</em><strong> CORE-0260</strong>
+    
+                    <!-- CATEGORY -->
+                    <h4 id="data-category">Category</h4>
+                    Development Framework - REST API Documentation
+    
+                    <!-- DESCRIPTION -->
+                    <h4 id="data-description">Description</h4>
+                    <p style="color:red;font-weight:bold;">Discuss with Paula</p>
+    
+                    <!-- USAGE -->
+                    <h4 id="data-usage">Usage</h4>
+                    <p>Pending discussion</p>
+    
+                    <!-- PRODUCT INFO -->
+                    <h4 id="data-product">Product Info</h4>
+                    <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+    
+                    <div class="pl-preview">
+                        <div style="padding: 10px; background: #fff;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Current State</th>
+                                        <th>Future State</th>
+                                        <th>See Also</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Pending discussion
+                                        </td>
+                                        <td>
+                                            Pending discussion
+                                        </td>
+                                        <td>
+                                            Spring Framework<br /> Spring Boot<br />Spring Security<br /> Spring Integration<br /> Spring Data<br /> Spring Batch
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <figure class="highlight">
                         <pre>
                             <code class="language-html" data-lang="html">
-                                <span>Spring Boot 4.3.10</span>
-                                <span>Spring Boot 5.x.x</span>
+                                <span>Spring Batch 3.0.8</span>
+                                <span>Spring Batch 4.x.x</span>
                                 <br />
                                 <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
-                                <span>Spring Security<</span>span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Boot</span>span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Security</span><span class="nt">&lt;br /&gt;</span>
                                 <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
                                 <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
-                                <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
                                 <span>Spring Rest Docs - <em>Under Review</em></span>
                             </code>
                         </pre>
                     </figure>
                 </div>
-            </section>
+            </section>    
 
-            <!-- DEVELOPMENT FRAMEWORK: SECURITY -->
-            <section id="spring-security" class="pl-content">
-                    
-        
-        
-                    <div class="pl-pattern">
-                        <h3>Security</h3>
-                        <!-- ID -->
-                        <h4 id="security-id">Stack Id</h4>
-                        <p>
-                            [<em>P | T | FM | PB]</em><strong> CORE-0220</strong>
-                        </p>
-                        <p>
-                        <!-- CATEGORY -->
-                        <h4 id="security-category">Category</h4>
-                        <p>
-                            Development Framework - Security
-                        </p>
-                        <!-- DESCRIPTION -->
-                        <h4 id="security-description">Description</h4>
-                        <p>A standard abstraction layer for converting authentication and access controls provided by <strong>RBAC/MyUSPTO</strong> into development level controls.  
-                            Items like session timeout, clickjacking, translation of RBAC JWTs to access control implementation are managed via the security abstraction.
-                            Abstraction allows the evolution and/or replacement of RBAC/MyUSPTO without changing underlying auth/access code mechanics</p>
-                        <ul style="margin-top: 0;list-style-position: inside;padding-left:0;">
-                            <li>Generation of standard folder laysuts</li>
-                            <li>Creating inclusion and dependency management files: POM, package.json, gulpfile.js, etc.</li>
-                            <li>Definition of end to end connector suites</li>
-                        </ul>
-                        <p>Scaffolding is an evolution of code generators from earlier development environments, such as Oracle's CASE Generator, and many other 4GL client-server software development products.</p>
-                        
-                        <!-- USAGE -->
-                        <h4 id="security-usage">Usage</h4>
-                        <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that "just run". Spring Boot takes an opinionated view of the Spring platform and third-party libraries so developers can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.</p>
-                        <p>Features:</p>
-                        <ul style="list-style-position: inside;padding-left:0;">
-                            <li>Create stand-alone Spring applications/li>
-                            <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)/li>
-                            <li>Provide opinionated 'starter' POMs to simplify your Maven configuration/li>
-                            <li>Automatically configure Spring whenever possible/li>
-                            <li>Provide production-ready features such as metrics, health checks and externalized configuration/li>
-                            <li>Absolutely no code generation and no requirement for XML configuration</li>
-                        </ul>
-        
-                        <!-- PRODUCT INFO -->
-                        <h4 id="security-product">Product Info</h4>
-                            <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
-                            
-                            <div class="pl-preview">
-                            <div style="padding: 40px; background: #fff;">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Current State</th>
-                                            <th>Future State</th>
-                                            <th>See Also</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                    Spring Security 4.2.3
-                                            </td>
-                                            <td>
-                                                    Spring Boot 5.x.x
-                                            </td>                                
-                                            <td>
-                                                    Spring Framework<br />
-                                                    Spring Security<br />
-                                                    Spring Integration<br />
-                                                    Spring Data<br />
-                                                    Spring Batch<br />
-                                                    Spring Rest Docs - <em>Under Review</em><br />
-                                                </td>                                
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <figure class="highlight">
-                                <pre>
-                                    <code class="language-html" data-lang="html">
-                                        <span>Spring Security 4.3.10</span>
-                                        <span>Spring Security 5.x.x</span>
-                                        <br />
-                                        <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
-                                        <span>Spring Boot<</span>span class="nt">&lt;br /&gt;</span>
-                                        <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
-                                        <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
-                                        <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
-                                        <span>Spring Rest Docs - <em>Under Review</em></span>
-                                    </code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </section>
         <!--
         <section class="pl-content">
             <div class="pl-pattern">
@@ -428,7 +914,7 @@
         </section>
         <section class="pl-content">
             <div class="pl-pattern">
-                <h3 id="spring-data">Data</h3>
+                <h3 id="spring-batch">Data</h3>
             </div>
         </section>
         <section class="pl-content">
@@ -655,18 +1141,18 @@
 
   <p> </p>
 -->
-</div>
-
-        </section>
     </div>
 
-        <script src="/designpatterns/1.x/generated/scripts/vendor.js"></script>
-        <script src="/designpatterns/1.x/generated/scripts/plugins.js"></script>
+    </section>
+    </div>
 
-        <script src="//components.uspto.gov/js/ais/2-4-pattern-library.js"></script>
+    <script src="/designpatterns/1.x/generated/scripts/vendor.js"></script>
+    <script src="/designpatterns/1.x/generated/scripts/plugins.js"></script>
 
-        <script src="/designpatterns/1.x/generated/scripts/main.js"></script>
+    <script src="//components.uspto.gov/js/ais/2-4-pattern-library.js"></script>
 
-    </body>
+    <script src="/designpatterns/1.x/generated/scripts/main.js"></script>
+
+</body>
+
 </html>
-
