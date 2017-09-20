@@ -1,0 +1,672 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Samples - EAGB</title>
+
+        <meta name="description" content="">
+        <meta name="keywords" contnet="">
+
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="#004c97">
+
+        <meta property="og:title" content="Colors">
+        <meta property="og:description" content="">
+
+        <link rel="shortcut icon" href="/designpatterns/1.x/generated/favicon.ico">
+
+        <!--[if lt IE 9]>
+            <script src="/designpatterns/1.x/generated/vendor/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <link href="/designpatterns/1.x/generated/styles/vendor.css" rel="stylesheet"/>
+        <link href="/designpatterns/1.x/generated/styles/main.css" rel="stylesheet"/>        
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-105659331-2', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+
+    </head>
+    <body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="pl-header navbar navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/designpatterns/index.html" class="navbar-brand"><strong>EAGB</strong> <span class="light">Samples</span></a>
+                <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-inverse icon-bars"></i></button>
+                <button data-toggle="collapse" data-target="#pl-navbar-collapse" type="button" class="btn navbar-toggle collapsed"><i class="icon icon-inverse icon-angle-down"></i></button>
+            </div>
+            <div class="navbar-collapse collapse" id="pl-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li  >
+                        <a href="/designpatterns/index.html">About</a>
+                    </li>
+                    <li  >
+                        <a href="/designpatterns/1.x/docs/index.html">Library</a>
+                    </li>
+                    <li  >
+                        <a href="/designpatterns/1.x/docs/resources.html">Resources</a>
+                    </li>
+                    <li  >
+                        <a href="/designpatterns/1.x/docs/guides/">Guides</a>
+                    </li>
+                    <li  >
+                        <a href="/designpatterns/1.x/docs/changelog.html">Changelog</a>
+                    </li>                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://github.com/uspto/designpatterns" title="View on Github" ><i class="icon icon-inverse icon-github"></i> &nbsp; View on Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="pl-container">
+        <nav class="pl-sidebar">
+            <ul class="nav nav-stacked">
+                <li class="category">Development Framework</li>
+                    <li  class="active"  >
+                        <a  href=""> Development Framework </a>
+                    </li>
+                    <li  >
+                        <a  href="#spring-boot"> Boot </a>
+                    </li>
+                
+                    <li  >
+                        <a  href="#spring-security"> Security </a>
+                    </li>
+
+                    <li  >
+                        <a  href="#spring-integration"> Integration </a>
+                    </li>
+                
+                    <li  >
+                       <a  href="#spring-data"> Data </a>
+                    </li>
+                
+                    <li  >
+                        <a  href="#spring-batch"> Batch </a>
+                    </li>
+                
+                    <li  >
+                        <a  href="#spring-restdocs"> Rest Docs - <em>Under Review</em></a>
+                    </li>
+
+                <li class="category">products</li>
+                    <li  class="active"  >
+                        <a  href="/designpatterns/1.x/docs/samples/products/springCore.html"> Spring</a>
+                    </li>
+                    <li  >
+                        <a  href="/designpatterns/1.x/docs/samples/products/springBoot.html"> Boot </a>
+                    </li>
+                
+                    <li  >
+                        <a  href="/designpatterns/1.x/docs/samples/products/springSecurity.html"> Security </a>
+                    </li>
+
+                    <li  >
+                        <a  href="/designpatterns/1.x/docs/samples/products/springIntegration.html"> Integration </a>
+                    </li>
+                
+                    <li  >
+                        <a  href="/designpatterns/1.x/docs/samples/products/springData.html"> Data </a>
+                    </li>
+                
+                    <li  >
+                        <a  href="/designpatterns/1.x/docs/samples/products/springBatch.html"> Batch </a>
+                    </li>
+                
+                    <li  >
+                        <a  href="/designpatterns/1.x/docs/samples/products/springRestDocs.html"> Rest Docs - <em>Under Review</em></a>
+                    </li>
+
+            </ul>
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Core</h3>
+                <!-- ID -->
+                <h4 id="core-id">Stack Id</h4>
+                <p>
+                    [<em>P | T | FM | PB]</em><strong> CORE-0200</strong>
+                </p>
+                <p>
+                <!-- CATEGORY -->
+                <h4 id="core-category">Category</h4>
+                <p>
+                    Development Framework - Core
+                </p>
+                <!-- DESCRIPTION -->
+                <h4 id="core-description">Description</h4>
+                <p>A software abstraction providing generic functionality selectively changed by additional user-written code, thus providing application-specific software. A software framework is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions. Software frameworks may include support programs, compilers, code libraries, tool sets, and application programming interfaces (APIs) that bring together all the different components to enable development of a project or solution.</p>
+                <p>Features:</p>
+                <ul style="list-style-position: inside;padding-left:0;">
+                    <li>Inversion of control</li>
+                    <li>Default behavior<br/></li>
+                    <li>Extensibility</li>
+                    <li>Non-modifiable framework code</li>
+                </ul>
+                <p style="color: red;"><strong>Developer&#39;s Note:</strong>&#160;&#160;Not all components in Spring are approved for use (e.g. embedded tomcat), and some, like hateoas, require specific use approval</p>
+                <!-- USAGE -->
+                <h4 id="core-usage">Usage</h4>
+                <p>The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.</p>
+                <p>Features:</p>
+                <ul style="list-style-position: inside;padding-left:0;">
+                    <li>Dependency Injection</li>
+                    <li>Aspect-Oriented Programming including Spring's declarative transaction management</li>
+                    <li>Spring MVC web application and RESTful web service framework</li>
+                    <li>Foundational support for JDBC, JPA, JMS</li>
+                </ul>
+                <!-- PRODUCT INFO -->
+                <h4 id="core-product">Product Info</h4>
+                    <p><em style="color:gray">All product specific information goes here (excepting Usage blurb)</em></p>
+                
+                  <div class="pl-preview">
+                    <div style="padding: 40px; background: #fff;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Current State</th>
+                                    <th>Future State</th>
+                                    <th>See Also</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                            Spring Framework 4.3.10
+                                    </td>
+                                    <td>
+                                            Spring Framework 5.x.x
+                                    </td>                                
+                                    <td>
+                                            Spring Boot<br />
+                                            Spring Security<br />
+                                            Spring Integration<br />
+                                            Spring Data<br />
+                                            Spring Batch<br />
+                                            Spring Rest Docs - <em>Under Review</em><br />
+                                        </td>                                
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+                            <span>Spring Framework 4.3.10</span>
+                            <span>Spring Framework 5.x.x</span>
+                            <br />
+                            <span>Spring Boot</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Security<</span>span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
+                            <span>Spring Rest Docs - <em>Under Review</em></span>
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </section>
+        <section id="spring-boot" class="pl-content">
+            
+
+
+            <div class="pl-pattern">
+                <h3>Boot</h3>
+                <!-- ID -->
+                <h4 id="boot-id">Stack Id</h4>
+                <p>
+                    [<em>P | T | FM | PB]</em><strong> CORE-0210</strong>
+                </p>
+                <p>
+                <!-- CATEGORY -->
+                <h4 id="boot-category">Category</h4>
+                <p>
+                    Development Framework - Setup
+                </p>
+                <!-- DESCRIPTION -->
+                <h4 id="boot-description">Description</h4>
+                <p>Automated setup and scaffolding are techniques supported by some frameworks, in which developers can specify an applications usage and capabilities without directly interacting with the framework's configuration internals. Specificationis performed through a UI or by customizing standard configuration files (e.g. POM.XML)  The compiler or framework uses this specification, together with pre-defined code templates, to generate a startup applicaton.  Templated systems effectively treats the templates as a "scaffold" on which to build an integrated application with pre-defined dependencies.  The outcome is a simplified setup process.</p>
+                <u><strong>Typical features</strong></u>
+                <ul style="margin-top: 0;list-style-position: inside;padding-left:0;">
+                    <li>Generation of standard folder layouts</li>
+                    <li>Creating inclusion and dependency management files: POM, package.json, gulpfile.js, etc.</li>
+                    <li>Definition of end to end connector suites</li>
+                </ul>
+                <p>Scaffolding is an evolution of code generators from earlier development environments, such as Oracle's CASE Generator, and many other 4GL client-server software development products.</p>
+                
+                <!-- USAGE -->
+                <h4 id="boot-usage">Usage</h4>
+                <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that "just run". Spring Boot takes an opinionated view of the Spring platform and third-party libraries so developers can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.</p>
+                <p>Features:</p>
+                <ul style="list-style-position: inside;padding-left:0;">
+                    <li>Create stand-alone Spring applications/li>
+                    <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)/li>
+                    <li>Provide opinionated 'starter' POMs to simplify your Maven configuration/li>
+                    <li>Automatically configure Spring whenever possible/li>
+                    <li>Provide production-ready features such as metrics, health checks and externalized configuration/li>
+                    <li>Absolutely no code generation and no requirement for XML configuration</li>
+                </ul>
+
+                <!-- PRODUCT INFO -->
+                <h4 id="boot-product">Product Info</h4>
+                    <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+                    
+                    <div class="pl-preview">
+                    <div style="padding: 40px; background: #fff;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Current State</th>
+                                    <th>Future State</th>
+                                    <th>See Also</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                            Spring Boot 4.3.10
+                                    </td>
+                                    <td>
+                                            Spring Boot 5.x.x
+                                    </td>                                
+                                    <td>
+                                            Spring Framework<br />
+                                            Spring Security<br />
+                                            Spring Integration<br />
+                                            Spring Data<br />
+                                            Spring Batch<br />
+                                            Spring Rest Docs - <em>Under Review</em><br />
+                                        </td>                                
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <figure class="highlight">
+                        <pre>
+                            <code class="language-html" data-lang="html">
+                                <span>Spring Boot 4.3.10</span>
+                                <span>Spring Boot 5.x.x</span>
+                                <br />
+                                <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Security<</span>span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
+                                <span>Spring Rest Docs - <em>Under Review</em></span>
+                            </code>
+                        </pre>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- DEVELOPMENT FRAMEWORK: SECURITY -->
+            <section id="spring-security" class="pl-content">
+                    
+        
+        
+                    <div class="pl-pattern">
+                        <h3>Security</h3>
+                        <!-- ID -->
+                        <h4 id="security-id">Stack Id</h4>
+                        <p>
+                            [<em>P | T | FM | PB]</em><strong> CORE-0220</strong>
+                        </p>
+                        <p>
+                        <!-- CATEGORY -->
+                        <h4 id="security-category">Category</h4>
+                        <p>
+                            Development Framework - Security
+                        </p>
+                        <!-- DESCRIPTION -->
+                        <h4 id="security-description">Description</h4>
+                        <p>A standard abstraction layer for converting authentication and access controls provided by <strong>RBAC/MyUSPTO</strong> into development level controls.  
+                            Items like session timeout, clickjacking, translation of RBAC JWTs to access control implementation are managed via the security abstraction.
+                            Abstraction allows the evolution and/or replacement of RBAC/MyUSPTO without changing underlying auth/access code mechanics</p>
+                        <ul style="margin-top: 0;list-style-position: inside;padding-left:0;">
+                            <li>Generation of standard folder laysuts</li>
+                            <li>Creating inclusion and dependency management files: POM, package.json, gulpfile.js, etc.</li>
+                            <li>Definition of end to end connector suites</li>
+                        </ul>
+                        <p>Scaffolding is an evolution of code generators from earlier development environments, such as Oracle's CASE Generator, and many other 4GL client-server software development products.</p>
+                        
+                        <!-- USAGE -->
+                        <h4 id="security-usage">Usage</h4>
+                        <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that "just run". Spring Boot takes an opinionated view of the Spring platform and third-party libraries so developers can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.</p>
+                        <p>Features:</p>
+                        <ul style="list-style-position: inside;padding-left:0;">
+                            <li>Create stand-alone Spring applications/li>
+                            <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)/li>
+                            <li>Provide opinionated 'starter' POMs to simplify your Maven configuration/li>
+                            <li>Automatically configure Spring whenever possible/li>
+                            <li>Provide production-ready features such as metrics, health checks and externalized configuration/li>
+                            <li>Absolutely no code generation and no requirement for XML configuration</li>
+                        </ul>
+        
+                        <!-- PRODUCT INFO -->
+                        <h4 id="security-product">Product Info</h4>
+                            <p><em style="color:beige">All product specific information goes here (excepting Usage blurb)</em></p>
+                            
+                            <div class="pl-preview">
+                            <div style="padding: 40px; background: #fff;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Current State</th>
+                                            <th>Future State</th>
+                                            <th>See Also</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                    Spring Security 4.2.3
+                                            </td>
+                                            <td>
+                                                    Spring Boot 5.x.x
+                                            </td>                                
+                                            <td>
+                                                    Spring Framework<br />
+                                                    Spring Security<br />
+                                                    Spring Integration<br />
+                                                    Spring Data<br />
+                                                    Spring Batch<br />
+                                                    Spring Rest Docs - <em>Under Review</em><br />
+                                                </td>                                
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <figure class="highlight">
+                                <pre>
+                                    <code class="language-html" data-lang="html">
+                                        <span>Spring Security 4.3.10</span>
+                                        <span>Spring Security 5.x.x</span>
+                                        <br />
+                                        <span>Spring Framework</span><span class="nt">&lt;br /&gt;</span>
+                                        <span>Spring Boot<</span>span class="nt">&lt;br /&gt;</span>
+                                        <span>Spring Integration</span><span class="nt">&lt;br /&gt;</span>
+                                        <span>Spring Data</span><span class="nt">&lt;br /&gt;</span>
+                                        <span>Spring Batch</span><span class="nt">&lt;br /&gt;</span>
+                                        <span>Spring Rest Docs - <em>Under Review</em></span>
+                                    </code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </section>
+        <!--
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="spring-boot">Boot</h3>
+            </div>
+        </section>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="spring-security">Security</h3>
+            </div>
+        </section>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="spring-integration">Integration</h3>
+            </div>
+        </section>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="spring-data">Data</h3>
+            </div>
+        </section>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="spring-batch">Batch</h3>
+            </div>
+        </section>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="spring-restdocs">Rest Docs</h3>
+            </div>
+        </section>
+        
+        
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="primary-ui-colors">Setup</h3>
+                <h4>CORE-0210 - Development Framework - Setup</h4>
+                <p>
+                    CORE-0210
+                    <br />
+                    Development Framework - Setup
+                </p>
+                <h4 id="colors">Colors</h4>
+                <div class="pl-palette">
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#004c97;"></div>
+                        <div class="pl-palette-variable">@brand-primary</div>
+                        <div class="pl-palette-value">#004C97</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#007A33;"></div>
+                        <div class="pl-palette-variable">@brand-success</div>
+                        <div class="pl-palette-value">#007A33</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#009CDE;"></div>
+                        <div class="pl-palette-variable">@brand-info</div>
+                        <div class="pl-palette-value">#009CDE</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#F3D54E;"></div>
+                        <div class="pl-palette-variable">@brand-warning</div>
+                        <div class="pl-palette-value">#F3D54E</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#A6192E;"></div>
+                        <div class="pl-palette-variable">@brand-danger</div>
+                        <div class="pl-palette-value">#A6192E</div>
+                    </div>
+                </div>
+
+                <h4 id="grays">Grays</h4>
+                <div class="pl-palette">
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#222222;"></div>
+                        <div class="pl-palette-variable">@gray-darker</div>
+                        <div class="pl-palette-value">#222222</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#333333;"></div>
+                        <div class="pl-palette-variable">@gray-dark</div>
+                        <div class="pl-palette-value">#333333</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#555555;"></div>
+                        <div class="pl-palette-variable">@gray</div>
+                        <div class="pl-palette-value">#555555</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#808080;"></div>
+                        <div class="pl-palette-variable">@gray-light</div>
+                        <div class="pl-palette-value">#808080</div>
+                    </div>
+                    <div class="pl-palette-color">
+                        <div class="pl-palette-preview" style="background-color:#eeeeee;"></div>
+                        <div class="pl-palette-variable">@gray-lighter</div>
+                        <div class="pl-palette-value">#EEEEEE</div>
+                    </div>
+                </div>
+
+  <p> </p>
+
+</div>
+
+<div class="pl-pattern">
+
+  <h3 id="full-brand-palette">Full brand palette</h3>
+
+  <p>This is the full USPTO color palette. However, many of these are rarely used for UI elements.</p>
+
+<div class="pl-palette">
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #643335;"></div>
+        <div class="pl-palette-variable">@dark-red</div>
+        <div class="pl-palette-value">#643335</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #A6192E;"></div>
+        <div class="pl-palette-variable">@medium-red</div>
+        <div class="pl-palette-value">#A6192E</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #E4002B;"></div>
+        <div class="pl-palette-variable">@bright-red</div>
+        <div class="pl-palette-value">#E4002B</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #FABBCB;"></div>
+        <div class="pl-palette-variable">@light-pink</div>
+        <div class="pl-palette-value">#FABBCB</div>
+    </div>
+</div>
+<div class="pl-palette">
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #003865;"></div>
+        <div class="pl-palette-variable">@dark-blue</div>
+        <div class="pl-palette-value">#003865</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #004C97;"></div>
+        <div class="pl-palette-variable">@medium-blue</div>
+        <div class="pl-palette-value">#004C97</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #009CDE;"></div>
+        <div class="pl-palette-variable">@bright-blue</div>
+        <div class="pl-palette-value">#009CDE</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #9BB8D3;"></div>
+        <div class="pl-palette-variable">@pale-blue</div>
+        <div class="pl-palette-value">#9BB8D3</div>
+    </div>
+</div>
+<div class="pl-palette">
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #004C23;"></div>
+        <div class="pl-palette-variable">@dark-green</div>
+        <div class="pl-palette-value">#004C23</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #007A33;"></div>
+        <div class="pl-palette-variable">@medium-green</div>
+        <div class="pl-palette-value">#007A33</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #7A9A01;"></div>
+        <div class="pl-palette-variable">@light-green</div>
+        <div class="pl-palette-value">#7A9A01</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #D4EB8E;"></div>
+        <div class="pl-palette-variable">@pale-green</div>
+        <div class="pl-palette-value">#D4EB8E</div>
+    </div>
+</div>
+<div class="pl-palette">
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #3C1053;"></div>
+        <div class="pl-palette-variable">@dark-purple</div>
+        <div class="pl-palette-value">#3C1053</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #671E75;"></div>
+        <div class="pl-palette-variable">@medium-purple</div>
+        <div class="pl-palette-value">#671E75</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #BB16A3;"></div>
+        <div class="pl-palette-variable">@light-purple</div>
+        <div class="pl-palette-value">#BB16A3</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #C9B1D0;"></div>
+        <div class="pl-palette-variable">@pale-purple</div>
+        <div class="pl-palette-value">#C9B1D0</div>
+    </div>
+</div>
+<div class="pl-palette">
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #A07400;"></div>
+        <div class="pl-palette-variable">@dark-yellow</div>
+        <div class="pl-palette-value">#A07400</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #F2A900;"></div>
+        <div class="pl-palette-variable">@medium-yellow</div>
+        <div class="pl-palette-value">#F2A900</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #F3D54E;"></div>
+        <div class="pl-palette-variable">@light-yellow</div>
+        <div class="pl-palette-value">#F3D54E</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #EFDBB2;"></div>
+        <div class="pl-palette-variable">@pale-yellow</div>
+        <div class="pl-palette-value">#EFDBB2</div>
+    </div>
+</div>
+<div class="pl-palette">
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #000000;"></div>
+        <div class="pl-palette-variable">@black</div>
+        <div class="pl-palette-value">#000000</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #63666A;"></div>
+        <div class="pl-palette-variable">@gray-75</div>
+        <div class="pl-palette-value">#63666A</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #A7A8AA;"></div>
+        <div class="pl-palette-variable">@gray-50</div>
+        <div class="pl-palette-value">#A7A8AA</div>
+    </div>
+    <div class="pl-palette-color">
+        <div class="pl-palette-preview" style="background-color: #D9D9D6;"></div>
+        <div class="pl-palette-variable">@gray-25</div>
+        <div class="pl-palette-value">#D9D9D6</div>
+    </div>
+</div>
+
+  <p> </p>
+-->
+</div>
+
+        </section>
+    </div>
+
+        <script src="/designpatterns/1.x/generated/scripts/vendor.js"></script>
+        <script src="/designpatterns/1.x/generated/scripts/plugins.js"></script>
+
+        <script src="//components.uspto.gov/js/ais/2-4-pattern-library.js"></script>
+
+        <script src="/designpatterns/1.x/generated/scripts/main.js"></script>
+
+    </body>
+</html>
+
