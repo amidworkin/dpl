@@ -1,0 +1,539 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    </style>
+    <div id="toc">
+    
+    <h1>Logging/Monitoring Stack TOC</h1>
+    <ul>
+        <li><strong>6000</strong> - <a href="#logging_standards_and_practices">Logging Standards & Practices</a> - <span style="background-color:orange;color:black;font-weight:bold">&nbsp;Review w/Paula&nbsp;</span></li>
+        <li><strong>6010</strong> - <a href="#logging_framework">Logging Framework</a> - <span style="background-color:green;color:yellow;font-weight:bold">&nbsp;Stack Ready&nbsp;</span></li>
+        <li><strong>6020</strong> - <a href="#apm">Application Performance Management</a> - <span style="background-color:green;color:yellow;font-weight:bold">&nbsp;Stack Ready&nbsp;</span></li>
+        <li><strong>6030</strong> - <a href="#itoa">IT Operation Analytics (ITOA)</a> - <span style="background-color:green;color:yellow;font-weight:bold">&nbsp;Stack Ready&nbsp;</span></li>
+        <li><strong>6040</strong> - <a href="#synthetic_monitoring">Synthetic Monitoring</a> - <span style="background-color:yellow;color:black;font-weight:bold">&nbsp;In Progress&nbsp;</span></li>
+        <li><strong>6050</strong> - <a href="#storage">Log Storage</a> - <span style="background-color:yellow;color:black;font-weight:bold">&nbsp;In Progress&nbsp;</span></li>
+        <li><strong>9999</strong> - <a href="#open_issues">Open Issues</a> - &nbsp;Ongoing&nbsp;</li>
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="logging_standards_and_practices">
+    
+    <h2>Log/Mon - Logging Standards & Practices<span style="color:lightsteelblue"> - CATEGORY - <span style="background-color:orange;color:black;font-weight:bold">&nbsp;Review w/Paula&nbsp;</span></h2>
+    <code>
+    6000 - Log/Mon - Logging Standards & Practices
+    </code>
+    
+    <h3>6000 - Log/Mon - Logging Standards & Practices<span style="color:lightsteelblue"> - DESCRIPTION</span></h3>
+    <p>Logging provides business auditing, diagnostic and development information, operational data, and security auditing information for NextGen applications.  Logging information is broken down into three main categories – application logging, application support infrastructure logging, and system logging.  There are a variety of tools being used within USPTO to collect, aggregate, and analyze the information from all of these logging mechanisms.  Proper logging process must be followed in order to allow these tools to operate.
+    </p>
+    
+    <h3>6000 - Log/Mon - Logging Standards & Practices<span style="color:lightsteelblue"> - USAGE</span></h3>
+    <p>Application designers must:</p>
+    <ol>
+        <li>Ensure that the application employs components that can be properly instrumented to work with the USPTO standard monitoring and auditing tools.  Typically, these would include <a href="" target="_blank">AppDynamics</a> and <a href="" target="_blank">Splunk</a>.</li>
+        <li>Ensure that the events specified can be logged through an appropriate mechanism.</li>
+        <li>Some of these events may be logged by application servers, AppDynamics, etc.  These will be referred to as “automatically” logged.</li>
+        <li>Ensure that the application maintains a complete history of all completed business transactions.  Applications that save complete transaction history may use the history mechanism for auditing purposes.  Applications that don’t should log all business transactions.</li>
+    </ol>
+    <p>Application developers must:</p>
+    <ol>
+        <li>Use the logging framework approved within their application technology stack.</li>
+        <li>Log all events specified that the application designer has determined are not automatically logged.</li>
+        <li>Check to ensure that the logging format adheres to the format specified </li>
+    </ol>
+    
+    <h3>6010 - Log/Mon - Logging Framework<span style="color:lightsteelblue"> - STATES</span></h3>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Stack</th>
+            <th>Current</th>
+            <th>Future</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td>6000 - Log/Mon - Logging Framework</td>
+            <td>Patents</td>
+            <td><a href="" target="_blank">OCT's NextGen Applications Logging Guidelines 3.0</a></td>
+            <td><a href="" target="_blank">OCT's NextGen Applications Logging Guidelines x.x</a></td>
+            <td>
+                <span style="color:red"><span style="font-weight:bold">NOTE:</span> Enter <code><u>USPTO Logging Guidelines V3.0</u></code> document into archive and point to it.
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="logging_framework">
+    
+    
+    
+    <h2>Log/Mon - Logging Framework<span style="color:lightsteelblue"> - CATEGORY</span></h2>
+    <code>
+    6010 - Log/Mon - Logging Framework
+    </code>
+    
+    <h3>6010 - Log/Mon - Logging Framework<span style="color:lightsteelblue"> - DESCRIPTION</span></h3>
+    
+    <p>Logging provides business auditing, diagnostic and development information, operational data, and security auditing information for NextGen applications.  Logging information is broken down into three main categories – application logging<em>(this category)</em>, application support infrastructure logging, and system logging.  There are a variety of tools being used within USPTO to collect, aggregate, and analyze the information from all of these logging mechanisms.  This category defines the application logging tools.</p>
+    <p>A logging framework is a computer data logging package for an application or service platform.  Logging refers to the recording of activity.  Logging is a common issue for development teams.  Frameworks ease and standardize the process of logging for the development platform.</p>
+    <p>Logging is broken into three major component:</p>
+    <ul>
+        <li><strong>The Logger</strong> - Responsible for capturing the message to be logged along with certain metadata and passing it to the logging framework</li>
+        <li><strong>Formatter</strong> - Formats logged message for output</li>
+        <li><strong>Handler/Appender</strong> - Appends or outputs the formatted message to the appropriate end point.This might include a console display, writing to disk, appending to a database, or email. </li>
+    </ul>
+    
+    <h3>6010 - Log/Mon - Logging Framework<span style="color:lightsteelblue"> - USAGE</span></h3>
+    <p>Application designers must:</p>
+    <ol>
+    <li><strong>Instrument</strong> - Ensure the application employs components that can be properly instrumented to work with the USPTO standard monitoring and auditing tools <em>(<a href="" target="_blank">AppDynamics</a> and <a href="" target="_blank">Splunk</a>)</em></li>
+    <li><strong>Rationalize</strong> - Ensure that the events can be logged through an appropriate mechanism</li>
+    <li><strong>Coverage</strong> - Ensure application maintains a complete history of all completed business transactions.
+    </ol>
+    <p><em>NOTE:  Events logged by application servers, AppDynamics, etc.  are referred to as “automatically” logged</em></p>
+    <p>NeGen applications use a standardized exception mechanism within their business logic. Built into the construction process for some standard exceptions should be the automatic generation of an appropriate log message. Thus, certain types of failures might throw a transaction failure exception, and the act of throwing that exception would automatically log the transaction failure (presumably with severity ERROR). The use of the common severity definitions and the enforcement of appropriate logging is a code level issue and should be addressed by code reviews. It will be extremely important that programmers follow this model if the Operations team is going to get useful information from the logs.
+    <ul>
+        <li><em>FATAL</em> - Process has had an unrecoverable failure</li>
+        <li><em>ERROR</em> - Process interrupted</li>
+        <li><em>WARNING</em> - Indicates unusual occurence in completed process</li>
+        <li><em>INFO</em> - Process or unit of work noteworthy in some manner</li>
+        <li><em>DEBUG</em> - Information useful to developer or devops error management.</li>
+    </ul>
+    <p>Types of events that must be logged
+    <ul>
+        <li>Transaction Failure</li>
+        <li>Critical Transactions</li>
+        <li>Calls to other systems</li>
+        <li>Calls to web services</li>
+        <li>Database calls</li>
+        <li>Important business transactions</li>
+    </ul>
+    
+    
+    <h3>6010 - Log/Mon - Logging Framework<span style="color:lightsteelblue"> - STATES</span></h3>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Stack</th>
+            <th>Current</th>
+            <th>Future</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td>6010 - Log/Mon - Logging Framework</td>
+            <td>Patents</td>
+            <td><a href="https://www.slf4j.org/download.html" target="_blank">SLF4J 1.7.x</a></td>
+            <td><a href="https://www.slf4j.org/download.html" target="_blank">SLF4J 1.7.x</a></td>
+            <td>
+                <p>The Simple Logging Facade for Java (SLF4J) serves as a simple facade or abstraction for various logging frameworks (e.g. java.util.logging, logback, log4j) allowing the end user to plug in the desired logging framework at deployment time.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>6012 - Log/Mon - Logging Framework</td>
+            <td>Patents</td>
+            <td><a href="https://logback.qos.ch/dist/" target="_blank">Logback 1.1.x</a></td>
+            <td><a href="https://logback.qos.ch/download.html" target="_blank">Logback 1.2.x</a></td>
+            <td>
+                <p>Logback is the successor to log4j, picking up where log4j leaves off. Logback's architecture is sufficiently generic so as to apply under different circumstances. At present time, logback is divided into three modules, logback-core, logback-classic and logback-access.</p>
+    
+                <p>The <em>logback-core module</em> lays the groundwork for the other two modules.
+                <em>logback-classic</em> natively implements the SLF4J API so that you can readily switch back and forth between logback and other logging frameworks such as log4j or java.util.logging (JUL). <em>logback-access</em> module integrates with Servlet containers, such as Tomcat and Jetty
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>6014 - Log/Mon - Logging Framework</td>
+            <td>Patents</td>
+            <td><a href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/logging_with_jboss_eap" target="_blank">JBoss EAP 6.3.3 - Logging 3.1.4</a></td>
+            <td><a href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/logging_with_jboss_eap" target="_blank">JBoss EAP 7.x.x - Logging x.x.x</a></td>
+            <td>
+                <p>JBoss EAP provides highly-configurable logging facilities for both its own internal use and for use by deployed applications. The logging subsystem is based on JBoss LogManager and supports several third-party application logging frameworks including SLF4J/Logback.</p>
+                <p>EAP logging includes</p>
+                <ul>
+                    <li>Server logging</li>
+                    <li>Bootup logging</li>
+                    <li>Garbage collection logging</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    
+    
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="apm">
+    
+    
+    
+    <h2>Log/Mon - Application Performance Management<span style="color:lightsteelblue"> - CATEGORY</span></h2>
+    <code>
+    6020 - Log/Mon - Application Performance Management
+    </code>
+    <h3>6020 - Log/Mon - Application Performance Management<span style="color:lightsteelblue"> - DESCRIPTION</span></h3>
+    Application Performance Management (APM) is the monitoring and management of performance and availability of software applications. APM focuses on diagnosing complex application performance problems to maintain an expected level of service. APM is the translation of IT metrics into business meaning (value)
+    
+    Two sets of performance metrics are closely monitored. The first defines <em>performance experienced by end users</em> of the application. One example of performance is average response times under peak load. The components of the set include load and response time.
+    <ul>
+        <li><strong>Load</strong> - The volume of transactions processed by the application, e.g., transactions per second (tps), requests per second, pages per second. Without being loaded by computer-based demands for searches, calculations, transmissions, etc., most applications are fast enough, which is why programmers may not catch performance problems during development</li>
+        <li><strong>Response times</strong> - Times required for an application to respond to a user's actions at such a load</li>
+    </ul>
+    <p>The Second metrics <em>measure computational resources used by the application under load</em>, indicating whether there is adequate capacity to support the load, as well as possible locations of a performance bottleneck. Measurement of these quantities establishes an empirical performance baseline for the application. The baseline can then be used to detect changes in performance. Changes in performance can be correlated with external events and subsequently used to predict future changes in application performance.</p>
+    <p>Gartner's APM Conceptual Model:</p>
+    <ul>
+        <li><strong>End user experience (EUE)</strong> – Measuring the transit of traffic from user request to data and back again is part of capturing the end-user-experience (EUE)</li>
+        <li><strong>Runtime application architecture (ADDM)</strong> - Application Discovery and Dependency Mapping solutions exist to automate the process of mapping transactions and applications to underlying infrastructure components</li>
+        <li><strong>Business transaction</strong> - Focus on user-defined transactions or the URL page definitions that have some meaning to the business community</li>
+        <li><strong>Deep Dive Component Monitoring (DDCM)</strong> - Requires an agent install and is generally targeted in the middleware space focusing on the web, application, and messaging servers</li>
+        <li><strong>Analytics/reporting</strong> - A common set of metrics to collect and report on for each application, then standardize on a common view on how to present the application performance data</li>
+    </ul>
+    
+    
+    <h3>6020 - Log/Mon - Application Performance Management<span style="color:lightsteelblue"> - USAGE</span></h3>
+    <p>The use of APM is common for Web & Service applications, which lend themselves best to the more detailed monitoring techniques. In addition to measuring response time for a user, response times for components of a Web application or Service can also be monitored to help pinpoint causes of delay. There also exist HTTP appliances that can decode transaction-specific response times at the Web server layer of the application.
+    </p>
+    
+    <h3>6020 - Log/Mon - Application Performance Management<span style="color:lightsteelblue"> - STATES</span></h3>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Stack</th>
+            <th>Current</th>
+            <th>Future</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td>6020 - Log/Mon - Application Performance Management</td>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td><a href="https://www.appdynamics.com/product/" target="_blank">AppDynamics 4.2.8</a></td>
+            <td><a href="https://www.appdynamics.com/product/" target="_blank">AppDynamics 4.2.8</a></td>
+            <td>
+                <p>AppDynamics supplies real-time, end-to-end management for complex, distributed applications.  Focus on features like application mapping, dynamic baselining, and code level diagnostics.  Features include:</p>
+                <ul>
+                    <li>Real-time visibility into the customer journey and business-critical transactions</li>
+                    <li>Business critical alert filtering</li>
+                    <li>Root cause analysis</li>
+                    <li>App/Infrastructure/Business event correlation</li>
+                    <li>Assist deploy and scaling</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>6022 - Log/Mon - Application Performance Management</td>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td><a href="https://saas.hpe.com/en-us/software/sitescope" target="_blank">HP SiteScope 11.24</a></td>
+            <td><a href="https://saas.hpe.com/en-us/software/sitescope" target="_blank">HP SiteScope x.x</a></td>
+            <td>
+                <p>HP SiteScope is agentless monitoring software focused on monitoring the availability and performance of distributed IT infrastructures, including <em>Servers</em>, <em>Network devices</em> and <em>services</em>, <em>Applications</em> and <em>application components</em>, <em>operating systems</em> and various <em>IT enterprise components</em>.
+                </p>
+                <p>HP SiteScope tests a web page or a series of web pages using synthetic monitoring. However, it is not limited to web applications and can be used to monitor database servers (Oracle Database, Microsoft SQL Server, etc.), Unix servers, Microsoft Windows servers and many other types of hardware and software. It can export the collected data in real time to HP LoadRunner or used standalone.
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+    
+    
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="itoa">
+    
+    
+    
+    <h2>6030 - Log/Mon - IT Operations Analytics (ITOA)<span style="color:lightsteelblue"> - CATEGORY</span></h2>
+    <code>
+    6030 - Log/Mon - IT Operations Analytics (ITOA)
+    </code>
+    
+    <h3>6030 - Log/Mon - IT Operations Analytics (ITOA)<span style="color:lightsteelblue"> - DESCRIPTION</span></h3>
+    <p>IT operations analytics (ITOA) is an approach or method to retrieve, analyze, and report data for IT operations. ITOA may apply big data analytics to large datasets to produce business insights. Also known as IT data analytics are primarily used to discover complex patterns in high volumes of often "noisy" IT system availability and performance data.</p>
+    <p>Gartner's five types of analytics technologies:</p>
+    <ul>
+        <li>Log analysis</li>
+        <li>Unstructured text indexing, search and inference (UTISI)</li>
+        <li>Topological analysis (TA)</li>
+        <li>Multidimensional database search and analysis (MDSA)</li>
+        <li>Complex operations event processing (COEP)</li>
+        <li>Statistical pattern discovery and recognition (SPDR)</li>
+    </ul>
+    
+    <h3>6030 - Log/Mon - IT Operations Analytics (ITOA)<span style="color:lightsteelblue"> - STATES</span></h3>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Stack</th>
+            <th>Current</th>
+            <th>Future</th>
+            <th>Usage</th>
+        </tr>
+        <!-- 6030 - Patent -->
+        <tr>
+            <td>6030 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td><a href="https://www.appdynamics.com/product/" target="_blank">AppDynamics 4.2.8</a></td>
+            <td><a href="https://www.appdynamics.com/product/" target="_blank">AppDynamics x.x.x</a></td>
+            <td>
+                <p>AppDynamics supplies real-time, end-to-end management for complex, distributed applications.  Focus on features like application mapping, dynamic baselining, and code level diagnostics.  Features include:</p>
+                <ul>
+                    <li>Real-time visibility into the customer journey and business-critical transactions</li>
+                    <li>Business critical alert filtering</li>
+                    <li>Root cause analysis</li>
+                    <li>App/Infrastructure/Business event correlation</li>
+                    <li>Assist deploy and scaling</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>6032 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td><a href="https://saas.hpe.com/en-us/software/sitescope" target="_blank">HP SiteScope 11.24</a></td>
+            <td><a href="https://saas.hpe.com/en-us/software/sitescope" target="_blank">HP SiteScope x.x</a></td>
+            <td>
+                <p>HP SiteScope is agentless monitoring software focused on monitoring the availability and performance of distributed IT infrastructures, including <em>Servers</em>, <em>Network devices</em> and <em>services</em>, <em>Applications</em> and <em>application components</em>, <em>operating systems</em> and various <em>IT enterprise components</em>.
+                </p>
+                <p>HP SiteScope tests a web page or a series of web pages using synthetic monitoring. However, it is not limited to web applications and can be used to monitor database servers (Oracle Database, Microsoft SQL Server, etc.), Unix servers, Microsoft Windows servers and many other types of hardware and software. It can export the collected data in real time to HP LoadRunner or used standalone.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>6034 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td><a href="https://saas.hpe.com/en-us/software/network-node-manager-i-network-management-software" target="_blank">HP Network Node Manager i (NNMi) 9.23.005 (FP07)</a></td>
+            <td><a href="https://saas.hpe.com/en-us/software/network-node-manager-i-network-management-software">HP Network Node Manager i (NNMi) x.x.x</a></td>
+            <td>
+                Unifies fault, availability, and network performance monitoring for physical and virtual devices to increase network responsiveness, even on a massive scale.  Devices and networks include hosted and virtualized servers.
+            </td>
+        </tr>
+        <tr>
+            <td>6036 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td><a href="https://saas.hpe.com/en-us/software/operations-manager" target="_blank">HP Operations Manager (OM) Linux 9.11.040</td></a></td>
+            <td><a href="https://saas.hpe.com/en-us/software/operations-manager">HP Operations Manager (OM) Linux 9.11.040</td></a></td>
+            <td>
+                <p>HP Operations Manager is a system monitoring package operating in 'agent-push' mode, which means that a software agent component installed on the monitored hosts sends selected alerts to a centralized Management Server.  These agents carry out the instructions specified in HP-OM rule-sets called Policies. Distributing this processing around the client nodes reduces the load on both the management server and the network, by configuring these policies to select and transmit only the events that are needed, unlike the communication-heavy SNMP method. However, SNMP can be used where there is no supported operating system on the client equipment.
+                </p>
+                <p>The main task of the agent is to classify each event before transmission (or ignore it), so that the management server can route the messages to the appropriate destinations, which can include operator consoles, trouble-ticket systems, and notification systems.
+                </p>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>6038 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td><a href="https://support.sas.com/software/products/itsv/index.html" target="_blank">IT Resource Management 3.5</a></td>
+            <td><a href="https://support.sas.com/software/products/itsv/index.html" target="_blank">IT Resource Management x.x</a></td>
+            <td>
+                <p>SAS IT Resource Management is used to analyze, monitor and anticipate the utilization and performance of the IT enterprise. The solution allows IT organizations to deliver IT resources efficiently and provides the ability to demonstrate measurable value to the business it services.  Usage includes:
+                </p>
+                <ul>
+                    <li>Align IT and business by sharing IT performance and capacity facts</li>
+                    <li>Reduce IT costs through better use of resources</li>
+                    <li>Plan for IT infrastructure demand and reduce risks</li>
+                    <li>Measure and manage all IT resources and services</li>
+                </ul>
+            </td>
+        </tr>
+    
+    
+    </table>
+    
+    
+    
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="synthetic_monitor">
+    
+    
+    
+    <h2>6040 - Log/Mon - Synthetic Monitoring<span style="color:lightsteelblue"> - CATEGORY</span></h2>
+    <code>
+    6040 - Log/Mon - Synthetic Monitoring
+    </code>
+    
+    <h3>6040 - Log/Mon - Synthetic Monitoring<span style="color:lightsteelblue"> - DESCRIPTION</span></h3>
+    <p>Synthetic monitoring (also known as active monitoring or proactive monitoring) is website/service monitoring performed using Web browser emulation or scripted recordings of Web transactions. <em>Behavioral scripts</em> (or <em>paths</em>) are created to simulate an action or path that a customer or end-user would take on a site. Those paths are then continuously monitored at specified intervals for performance, such as: functionality, availability, and response time measures.
+    </p>
+    <p>Synthetic monitoring enables a webmaster or an IT/Operations professional to identify problems and determine if a website or Web application is slow or experiencing downtime before that problem affects actual end-users or customers. This type of monitoring does not require actual Web traffic so it enables companies to test Web applications 24x7, or test new applications prior to a live customer-facing launch. This is a good complement when used with passive monitoring to help provide visibility on application health during off peak hours when transaction volume is low.  Combined with APM tools, synthetic monitoring provides deeper visibility into end-to-end performance, regardless of where applications are running.
+    </p>
+    
+    <h3>6040 - Log/Mon - Synthetic Monitoring<span style="color:lightsteelblue"> - USAGE</span></h3>
+    <p>Because synthetic monitoring is a simulation of typical user behavior or navigation through a website, it is often best used to monitor commonly trafficked paths and critical business processes. Synthetic tests must be scripted in advance, so it is not feasible to measure performance for every permutation of a navigational path an end-user might take. This is more suited for passive monitoring.
+    </p>
+    <p>Synthetic testing is useful for measuring uptime, availability and response time of critical pages and transaction (how a site performs from all geographies) but doesn't monitor or capture actual end-user interactions, see Website monitoring. This is also known as Active monitoring that consists of synthetic probes and Web robots to help report on system availability and predefined business transactions.</p>
+    <h3>6040 - Log/Mon - Synthetic Monitoring<span style="color:lightsteelblue"> - STATES</span></h3>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Stack</th>
+            <th>Current</th>
+            <th>Future</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td>6040 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Financial MGMT</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+        <tr>
+            <td>6040 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Patent</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+        <tr>
+            <td>6040 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>PTAB</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+        <tr>
+            <td>6040 - Log/Mon - IT Operations Analytics (ITOA)</td>
+            <td>Trademark</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+    </table>
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="storage">
+    
+    
+    
+    <h2>6050 - Log/Mon - Log Storage<span style="color:lightsteelblue"> - CATEGORY</span></h2>
+    <code>
+    6050 - Log/Mon - Log Storage
+    </code>
+    
+    <h3>6050 - Log/Mon - Log Storage<span style="color:lightsteelblue"> - DESCRIPTION</span></h3>
+    <p>Logging data is a complex and evolving support area.  Logs must persist, be aggregation available,
+    </p>
+    Discovery under way - Reviewing best practices and/USPTO operational log stores.
+    </p>
+    
+    <h3>6050 - Log/Mon - Log Storage<span style="color:lightsteelblue"> - USAGE</span></h3>
+    <p>Storing log files varies from product to product.  Each will be defined in its product row.</p>
+    
+    <h3>6050 - Log/Mon - Log Storage<span style="color:lightsteelblue"> - STATES</span></h3>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Stack</th>
+            <th>Current</th>
+            <th>Future</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td>6050 - Log/Mon - Log Storage</td>
+            <td>Financial MGMT</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+        <tr>
+            <td>6050 - Log/Mon - Log Storage</td>
+            <td>Patent</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+        <tr>
+            <td>6050 - Log/Mon - Log Storage</td>
+            <td>PTAB</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+        <tr>
+            <td>6050 - Log/Mon - Log Storage</td>
+            <td>Trademark</td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td><a href="" target="_blank"><em>Under review</em></a></td>
+            <td>
+                Discovery in progress
+            </td>
+        </tr>
+    </table>
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="see_also">
+    
+    
+    
+    <h1>See Also</h1>
+    <table>
+        <tr>
+            <th>Stack</th>
+            <th>See Also</th>
+        </tr>
+        <tr>
+            <td>Financial MGMT</br>Patent</br>PTAB</br>Trademark</td>
+            <td>
+                SLF4J 1.7.x</br>
+                Logback 1.2.x</br>
+                JBoss EAP 7.x.x - Logging x.x.x</br>
+                AppDynamics Pro 4.2.8</br>
+                HP Network Node Manager i (NNMi) 9.23.005 (FP07)</br>
+                HP SiteScope 11.24</br>IT Resource Management 3.5</br>
+                HP Operations Manager (OM) Linux 9.11.040<br>
+                USPTO Logging Guidelines V3.0
+            </td>
+        </tr>
+    </table>
+    
+    </div>
+    <hr size="10" noshade>
+    <div id="open_issues">
+    
+    <h1>9999 - Open Issues</span></h1>
+    <ol>
+        <li>Where does Jimmy's new bot infrastructure fall in these categories</li>
+        <li>Is there an automated response category (future) for Jimmy's bots</li>
+        <li>Adding logging paper into tech cat</li>
+        <li>Finish discovery on Storage</li>
+        <li>Finish discovery on Synthetic Monitoring<li>
+        <ul>
+            <li>What coding language are scripts written in</li>
+            <li>What product receives the output from the scripts</li>
+            <li>What about front ends</li>
+        </ul>
+    </ol>
+    
+    
+    
+    
+    </ol>
+    
